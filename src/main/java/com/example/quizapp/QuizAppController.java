@@ -28,11 +28,15 @@ public class QuizAppController {
         for (Quiz quiz: quizzes) {
             //もしクイズが見つかったら
             if (quiz.getQuestion().equals(question)) {
-                return "見つかった ! :" + quiz.getQuestion();
+                // 登録されているanswerと回答として渡ってきたanswerが一致している場合、正解と返却する
+                if (quiz.isAnswer() == answer) {
+                    //正解と返却する
+                    return  "正解 ! ";
+                } else {
+                    //もし一致していなければ不正解と返却する
+                    return "不正解 !";
+                }
             }
-
-        // 登録されているanswerと回答として渡ってきたanswerが一致している場合、正解と返却する
-        //もし一致していなければ不正解と返却する
         }
         //クイズが見つからない場合は、問題がありませんと返却する
         return "問題がありません";
