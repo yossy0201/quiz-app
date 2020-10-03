@@ -22,5 +22,8 @@ public class QuizAppController {
         Quiz quiz = new Quiz(question, answer);
         quizzes.add(quiz);
     }
+    public String check(String  question, boolean answer) {
+     //   TODO: 回答が正しいかどうかチェックして、結果を返却する
+    }
 }
 
