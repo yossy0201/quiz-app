@@ -26,8 +26,15 @@ public class QuizTest {
 
         assertThat(quiz.getQuestion(), is("問題文1"));
         assertThat(quiz.isAnswer(), is(true));
+    }
 
+    @Test
+    public void fromStringWhenBatsu() {
+        String line = "問題文1 ×";
+        Quiz quiz = Quiz.fromString(line);
 
+        assertThat(quiz.getQuestion(), is("問題文1"));
+        assertThat(quiz.isAnswer(), is(false));
     }
 
 
