@@ -19,4 +19,14 @@ public class QuizTest {
         assertThat(quiz.toString(), is("問題文 ×"));
     }
 
+    public void fromStringWhenMaru() {
+        String line = "問題文1 ◯";
+        Quiz quiz = Quiz.fromString(line);
+
+        assertThat(quiz.getQuestion(), is("問題文1"));
+
+
+    }
+
+
 }
