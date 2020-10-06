@@ -13,6 +13,6 @@ public class QuizFileDao {
     public void write(List<Quiz> quizzes) {
 
         Path path = Paths.get(File_PATH)
-        Files.write();
+        Files.write(path, );
     }
 }
