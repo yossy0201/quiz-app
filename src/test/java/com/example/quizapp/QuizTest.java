@@ -36,6 +36,4 @@ public class QuizTest {
         assertThat(quiz.getQuestion(), is("問題文1"));
         assertThat(quiz.isAnswer(), is(false));
     }
-
-
 }
