@@ -1,6 +1,8 @@
 package com.example.quizapp;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 //Dao・・・Data access object
@@ -10,7 +12,7 @@ public class QuizFileDao {
 
     public void write(List<Quiz> quizzes) {
 
-
+        Path path = Paths.get(File_PATH)
         Files.write();
     }
 }
