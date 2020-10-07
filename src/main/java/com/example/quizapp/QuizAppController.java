@@ -41,5 +41,10 @@ public class QuizAppController {
         //クイズが見つからない場合は、問題がありませんと返却する
         return "問題がありません";
     }
+
+    @PostMapping("/save")
+    public String save() {
+
+    }
 }
 
