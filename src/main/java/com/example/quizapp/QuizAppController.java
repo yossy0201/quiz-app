@@ -10,7 +10,10 @@ import java.util.List;
 
 @RestController
 public class QuizAppController {
+    // クラス Quiz
     private List<Quiz> quizzes = new ArrayList<>();
+    private QuizFileDao quizFileDao = new QuizFileDao();
+
 
     @GetMapping("/show")
     public List<Quiz> show() {
